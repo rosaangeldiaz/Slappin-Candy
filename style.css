@@ -29,3 +29,26 @@ header {
   color: black;
   padding: 40px 20px;
 }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.product {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.product button {
+  background: #ff2fa0;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
