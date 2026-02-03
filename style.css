@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a00ff, #ff2fa0);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 80px 20px;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #00ffd5;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info {
+  background: white;
+  color: black;
+  padding: 40px 20px;
+}
