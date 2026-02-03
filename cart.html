@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart | Slappin Candy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍬 Your Cart</h1>
+    <a href="shop.html" class="btn">Back to Shop</a>
+  </header>
+
+  <section class="cart-items" id="cart-items">
+    <!-- Cart items will appear here -->
+  </section>
+
+  <p id="total">Total: $0.00</p>
+  <a href="checkout.html" class="btn">Checkout</a>
+
+  <script src="script.js"></script>
+  <script>
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalEl = document.getElementById('total');
+
+    function displayCart() {
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <p>${item.name} - $${item.price.toFixed(2)}</p>
+          <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartItemsContainer.appendChild(div);
+        total += item.price;
+      });
+      totalEl.textContent = 'Total: $' + total.toFixed(2);
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      displayCart();
+    }
+
+    // Show cart on page load
+    displayCart();
+  </script>
+
+</body>
+</html>
