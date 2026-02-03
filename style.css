@@ -52,3 +52,29 @@ header {
   border-radius: 20px;
   cursor: pointer;
 }
+
+.cart-items {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  background: #ff2fa0;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item button {
+  background: #00ffd5;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+}
