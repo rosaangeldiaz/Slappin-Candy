@@ -1,0 +1,195 @@
+/* ---------- GLOBAL STYLES ---------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a00ff, #ff2fa0);
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- HEADER & LOGO ---------- */
+.site-header {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 220px;
+  width: 100%;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.nav {
+  margin-top: 15px;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  background: #00ffd5;
+  color: black;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- HOME PAGE ---------- */
+header h1 {
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+.info {
+  background: white;
+  color: black;
+  padding: 40px 20px;
+}
+
+/* ---------- SHOP PAGE ---------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.product {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.product button {
+  background: #ff2fa0;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- CART PAGE ---------- */
+.cart-items {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  background: #ff2fa0;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item button {
+  background: #00ffd5;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* ---------- CHECKOUT PAGE ---------- */
+.checkout {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.checkout h2,
+.checkout h3 {
+  text-align: center;
+}
+
+.checkout label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.checkout input[type="text"],
+.checkout input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.checkout button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* ---------- ORDER SUMMARY ---------- */
+#order-summary p {
+  margin: 6px 0;
+}
+
+#checkout-total {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .products {
+    padding: 20px;
+  }
+
+  .cart-items {
+    padding: 20px;
+  }
+
+  .checkout {
+    margin: 20px;
+  }
+}
