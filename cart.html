@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart | Slappin Candy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Your Cart</h1>
+    <a href="shop.html" class="btn">Continue Shopping</a>
+  </header>
+
+  <section class="cart-items" id="cart-items">
+    <!-- Cart items will be injected here -->
+  </section>
+
+  <p id="total" style="font-size:1.3rem; font-weight:bold;"></p>
+
+  <div style="margin: 30px;">
+    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script>
+    // Load and display cart items when page loads
+    displayCart();
+  </script>
+
+</body>
+</html>
