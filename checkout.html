@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Slappin Candy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍬 Checkout</h1>
+    <a href="cart.html" class="btn">Back to Cart</a>
+  </header>
+
+  <section class="checkout">
+
+    <!-- ORDER SUMMARY -->
+    <h2>Your Order</h2>
+    <div id="order-summary"></div>
+    <p id="checkout-total"></p>
+
+    <hr style="margin: 30px 0;">
+
+    <!-- CHECKOUT FORM -->
+    <h2>Customer Info</h2>
+
+    <form id="checkout-form">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label>Order Type</label>
+      <label>
+        <input type="radio" name="orderType" value="pickup" checked>
+        Local Pickup
+      </label>
+
+      <label>
+        <input type="radio" name="orderType" value="delivery">
+        Local Delivery
+      </label>
+
+      <label>
+        <input type="radio" name="orderType" value="shipping">
+        Ship Nationwide
+      </label>
+
+      <!-- ADDRESS (HIDDEN FOR PICKUP) -->
+      <div id="address-fields" style="display:none;">
+        <label for="address">Street Address</label>
+        <input type="text" id="address">
+
+        <label for="city">City</label>
+        <input type="text" id="city">
+
+        <label for="zip">ZIP Code</label>
+        <input type="text" id="zip">
+      </div>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+
+    <!-- CONFIRMATION MESSAGE -->
+    <p id="confirmation" style="display:none; font-weight:bold; margin-top:20px;"></p>
+
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script>
+    // Show cart items on checkout page
+    displayCheckoutCart();
+
+    const orderTypeRadios = document.getElementsByName("orderType");
+    const addressFields = document.getElementById("address-fields");
+    const checkoutForm = document.getElementById("checkout-form");
+    const confirmation = document.getElementById("confirmation");
+
+    // Toggle address fields
+    orderTypeRadios.forEach(radio => {
+      radio.addEventListener("change", () => {
+        addressFields.style.display =
+          radio.value === "pickup" && radio.checked ? "none" : "block";
+      });
+    });
+
+    // Submit order
+    checkoutForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const orderType = document.querySelector(
+        'input[name="orderType"]:checked'
+      ).value;
+
+      confirmation.style.display = "block";
+      confirmation.textContent =
+        `Thank you ${name}! Your ${orderType} order has been placed.`;
+
+      // Clear cart
+      cart = [];
+      localStorage.removeItem("cart");
+    });
+  </script>
+
+</body>
+</html>
