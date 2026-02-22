@@ -1,1 +1,1 @@
-# Slappin-Candy
+# Slapping-Candy
